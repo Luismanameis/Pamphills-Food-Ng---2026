@@ -7,131 +7,141 @@
     <style>
         body { background-color: #000000; color: #ffffff; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
         
-        /* ULTRA-COMPACT STAGNANT HEADER */
         .sticky-header { 
             position: sticky; 
             top: 0; 
             z-index: 1000; 
-            background-color: rgba(0,0,0,0.95); 
-            backdrop-filter: blur(10px);
+            background-color: rgba(0,0,0,0.98); 
             border-bottom: 2px solid #00FF88;
-            padding: 10px 40px; /* Reduced padding */
+            padding: 10px 40px;
         }
 
         .h-section { 
             color: #ffffff; 
-            font-weight: 900; 
+            font-weight: 950; 
             text-transform: uppercase; 
-            border-left: 8px solid #00FF88; 
+            border-left: 10px solid #00FF88; 
             padding-left: 15px; 
-            margin: 30px 0 15px 40px; 
+            margin: 40px 0 20px 40px; 
             display: block; 
-            font-size: 1.8rem; /* Slightly smaller for better flow */
+            font-size: 2rem;
             letter-spacing: -1px;
         }
 
         .card { background: #0a0a0a; border: 1px solid #222; border-radius: 12px; padding: 15px; }
-        
         .stat-label { color: #ffffff; font-size: 0.65rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 2px; opacity: 0.8; }
         .stack-lg { font-size: 1.8rem; font-weight: 950; line-height: 1; letter-spacing: -1px; }
         
         table { width: 100%; border-collapse: collapse; }
         th { color: #ffffff; font-size: 11px; text-transform: uppercase; font-weight: 900; padding: 12px; border-bottom: 2px solid #333; text-align: left; background: #111; }
-        td { padding: 12px; border-bottom: 1px solid #1a1a1a; font-size: 1rem; font-weight: 700; color: #ffffff; }
+        td { padding: 14px; border-bottom: 1px solid #1a1a1a; font-size: 1.1rem; font-weight: 800; color: #ffffff; }
         
         .text-food-green { color: #00FF88; }
         .text-neon-red { color: #FF0000; }
-        .highlight-row { background: #0d0d0d; border-left: 5px solid #00FF88; }
         .grid-container { padding: 0 40px; }
+        .today-banner { background: linear-gradient(90deg, #00FF88 0%, #004424 100%); color: #000; padding: 10px 20px; font-weight: 900; text-transform: uppercase; }
     </style>
 </head>
 
 <body>
 
     <div class="sticky-header">
-        <div class="flex flex-row justify-between items-center mb-3">
-            <div>
-                <h1 class="text-3xl font-black italic tracking-tighter uppercase leading-none">PAMPHILLS<span class="text-[#00FF88]">FOOD</span></h1>
-                <p class="text-white font-black uppercase text-[8px] tracking-[4px] opacity-70">Jan 2026 Audit</p>
-            </div>
+        <div class="flex justify-between items-center mb-3">
+            <h1 class="text-3xl font-black italic tracking-tighter uppercase">PAMPHILLS<span class="text-[#00FF88]">FOOD</span></h1>
             <div class="text-right">
-                <p class="text-[9px] font-black text-[#00FF88] uppercase">Retention: 0.00%</p>
-                <p class="text-[9px] font-bold text-white opacity-50">15/01/2026</p>
+                <span class="bg-white text-black px-2 py-1 text-[10px] font-black rounded">JANUARY 2026 AUDIT</span>
             </div>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div class="card border-none bg-zinc-900/40"><p class="stat-label">Revenue</p><p class="stack-lg text-food-green">₦0.0k</p></div>
-            <div class="card border-none bg-zinc-900/40"><p class="stat-label">Customers</p><p class="stack-lg">0</p></div>
-            <div class="card border-none bg-zinc-900/40"><p class="stat-label">Expenses</p><p class="stack-lg text-neon-red">₦0.0k</p></div>
-            <div class="card border-none bg-zinc-900/40"><p class="stat-label">Gross Profit</p><p class="stack-lg text-food-green">₦0.0k</p></div>
+            <div class="card border-none bg-zinc-900/40"><p class="stat-label">MTD Revenue</p><p class="stack-lg text-food-green">₦0.0k</p></div>
+            <div class="card border-none bg-zinc-900/40"><p class="stat-label">MTD Units Sold</p><p class="stack-lg">0</p></div>
+            <div class="card border-none bg-zinc-900/40"><p class="stat-label">MTD Expenses</p><p class="stack-lg text-neon-red">₦0.0k</p></div>
+            <div class="card border-none bg-zinc-900/40"><p class="stat-label">MTD Profit</p><p class="stack-lg text-food-green">₦0.0k</p></div>
         </div>
     </div>
 
     <div class="grid-container">
-        
-        <span class="h-section">01. 2026 Full Audit Summary</span>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            <div class="card p-0 overflow-hidden">
-                <table>
-                    <thead><tr><th>Financials</th><th class="text-right">Value</th></tr></thead>
-                    <tbody>
-                        <tr><td>Cost of Sales (COS)</td><td class="text-right text-neon-red">₦0.0k</td></tr>
-                        <tr><td>Operations Cost</td><td class="text-right text-neon-red">₦0.0k</td></tr>
-                        <tr><td>Tax (Estimate)</td><td class="text-right text-neon-red">₦0.0k</td></tr>
-                        <tr class="highlight-row"><td>TOTAL EXPENSES</td><td class="text-right text-neon-red">₦0.0k</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="card p-0 overflow-hidden">
-                <table>
-                    <thead><tr><th>Customer Segments</th><th class="text-right">Count</th></tr></thead>
-                    <tbody>
-                        <tr><td>New Customers</td><td class="text-right">0</td></tr>
-                        <tr><td>Returning Customers</td><td class="text-right">0</td></tr>
-                        <tr><td>Total Units Sold</td><td class="text-right">0</td></tr>
-                        <tr class="highlight-row"><td>RETURN %</td><td class="text-right">0.00%</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
 
-        <span class="h-section">02. Channel Performance</span>
-        <div class="card mb-8 p-0 overflow-hidden">
+        <span class="h-section">01. Today's Numbers (15/01/2026)</span>
+        <div class="card p-0 overflow-hidden mb-8 border-[#00FF88]/30">
+            <div class="today-banner">Current Daily Pulse</div>
             <table>
                 <thead>
                     <tr>
-                        <th>Medium</th>
+                        <th>Metric</th>
                         <th>Revenue</th>
-                        <th class="text-right">% Contribution</th>
+                        <th>Customers</th>
+                        <th>Units Sold</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>WhatsApp</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
-                    <tr class="highlight-row"><td>Instagram - Ads</td><td>₦0.0k</td><td class="text-right text-food-green">0.00%</td></tr>
-                    <tr><td>Calls / Referrals</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
-                    <tr><td>Gym / Events / Staff</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
-                    <tr><td>Supermarkets & Malls</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
-                    <tr><td>Others (Trade Fair/DSI)</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
+                    <tr>
+                        <td class="text-zinc-400">Today's Performance</td>
+                        <td class="text-food-green text-2xl">₦0.0k</td>
+                        <td>0 Customers</td>
+                        <td>0 Units</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
-        <span class="h-section">03. Comparative (Jan vs Dec)</span>
+        <span class="h-section">02. This Month (January Full Breakdown)</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div class="card p-0 overflow-hidden">
+                <table>
+                    <thead><tr><th>January Financials</th><th class="text-right">Amount</th></tr></thead>
+                    <tbody>
+                        <tr><td>January Revenue</td><td class="text-right text-food-green">₦0.0k</td></tr>
+                        <tr><td>January Expenses</td><td class="text-right text-neon-red">₦0.0k</td></tr>
+                        <tr class="bg-zinc-900/50"><td>January Profit</td><td class="text-right text-food-green">₦0.0k</td></tr>
+                        <tr><td>January Margin</td><td class="text-right">0.00%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card p-0 overflow-hidden">
+                <table>
+                    <thead><tr><th>January Volume</th><th class="text-right">Count</th></tr></thead>
+                    <tbody>
+                        <tr><td>Total Customers</td><td class="text-right">0</td></tr>
+                        <tr><td>Total Units Sold</td><td class="text-right">0</td></tr>
+                        <tr><td>New Customers</td><td class="text-right">0</td></tr>
+                        <tr><td>Returning Customers</td><td class="text-right">0</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <span class="h-section">03. Medium Breakdown</span>
+        <div class="card p-0 overflow-hidden mb-12">
+            <table>
+                <thead><tr><th>Channel</th><th>Revenue</th><th class="text-right">% Contribution</th></tr></thead>
+                <tbody>
+                    <tr><td>WhatsApp</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
+                    <tr><td>Instagram - Ads</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
+                    <tr><td>Calls / Direct</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
+                    <tr><td>Staff / Gym / Referrals</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
+                    <tr><td>Supermarkets & Malls</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
+                    <tr><td>Others (Trade Fair/Events)</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <span class="h-section">04. Comparison (Jan vs Dec)</span>
         <div class="card mb-20 p-0 overflow-hidden">
             <table>
                 <thead>
                     <tr>
                         <th>Metric</th>
-                        <th>January</th>
-                        <th>December</th>
-                        <th class="text-right">Margin</th>
+                        <th>January (MTD)</th>
+                        <th>December (Full)</th>
+                        <th class="text-right">Margin %</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr><td>Revenue</td><td>₦0.0k</td><td>₦0.0k</td><td class="text-right">0.00%</td></tr>
-                    <tr><td>Customers</td><td>0</td><td>0</td><td class="text-right">0</td></tr>
-                    <tr><td>Profit</td><td class="text-food-green">₦0.0k</td><td>₦0.0k</td><td class="text-right text-food-green">0.00%</td></tr>
+                    <tr><td>Expenses</td><td class="text-neon-red">₦0.0k</td><td>₦0.0k</td><td class="text-right text-neon-red">0.00%</td></tr>
+                    <tr class="bg-zinc-900/30"><td>Net Profit</td><td class="text-food-green">₦0.0k</td><td>₦0.0k</td><td class="text-right text-food-green">0.00%</td></tr>
                 </tbody>
             </table>
         </div>
@@ -139,7 +149,7 @@
     </div>
 
     <footer class="text-center py-20 border-t border-zinc-900 opacity-20">
-        <p class="text-xl font-black text-white uppercase tracking-[15px] italic">Pamphills Food Audit</p>
+        <p class="text-xl font-black text-white uppercase tracking-[15px]">Pamphills Food Audit</p>
     </footer>
 
 </body>
